@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Catalog {% endblock %}
+
+{% block content %}
+<table class="table mt-5 table-bordered table-striped table-hover">
+    <thead class="table-dark text-center">
+        <tr>
+            <th>НАЗВАНИЕ КНИГИ</th>
+            <th>ИМЯ АВТОРА</th>  
+           
+                     
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+            <tr>
+                <td class="text-center">{{book.title}}</td>
+                <td class="text-center">{{book.author}}</td> 
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
